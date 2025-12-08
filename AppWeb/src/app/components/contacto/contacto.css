@@ -1,0 +1,134 @@
+.contacto {
+  padding: 3rem 2rem;
+  background: linear-gradient(180deg, #fff0f5, #ffe4e1);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contacto h2 {
+  font-size: 2rem;
+  color: #8B1E3F;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.contacto p {
+  text-align: center;
+  font-size: 1rem;
+  color: #5D2A42;
+  margin-bottom: 2rem;
+}
+
+/* Formulario */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: #FCE4EC;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #8B1E3F;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.8rem;
+  border: 2px solid #D94D9B;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #5D2A42;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Botón enviar */
+.btn-enviar {
+  background-color: #D94D9B;
+  color: #FFFFFF;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+.btn-enviar:hover {
+  background-color: #8B1E3F;
+}
+
+/* Botón WhatsApp */
+.btn-whatsapp {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background-color: #25D366;
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  background-color: #128C7E;
+}
+
+/* Bandeja de entrada */
+.bandeja {
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #FFF8F9;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.bandeja h3 {
+  font-size: 1.5rem;
+  color: #8B1E3F;
+  margin-bottom: 1.5rem;
+}
+
+.mensaje-card {
+  background-color: #fff;
+  border-left: 4px solid #D94D9B;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom: 1rem;
+}
+
+.mensaje-card h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #5D2A42;
+}
+
+.mensaje-card small {
+  color: #888;
+}
+
+.mensaje-card p {
+  margin: 0.5rem 0;
+  color: #4A4A4A;
+}

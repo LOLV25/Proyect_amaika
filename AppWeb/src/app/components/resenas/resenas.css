@@ -1,0 +1,138 @@
+.resenas {
+  padding: 3rem 2rem;
+  background: linear-gradient(180deg, #fff0f5, #ffe4e1);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.resenas-titulo {
+  font-size: 2rem;
+  color: #8B1E3F;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Formulario */
+.resena-form {
+  background-color: #FCE4EC;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.resena-form input,
+.resena-form textarea {
+  flex: 1;
+  padding: 0.8rem;
+  border: 2px solid #D94D9B;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #5D2A42;
+}
+
+.resena-form textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.btn-enviar {
+  background-color: #D94D9B;
+  color: #FFFFFF;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+  background-color: #8B1E3F;
+}
+
+/* Lista de reseñas */
+.lista-resenas {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.resena-item {
+  background-color: #fff;
+  border-left: 4px solid #D94D9B;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.resena-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.resena-avatar {
+  background-color: #D94D9B;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resena-nombre {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #8B1E3F;
+}
+
+.resena-rating {
+  font-size: 1rem;
+  color: #FF8A65;
+}
+
+.resena-puntaje {
+  color: #5D2A42;
+  margin-left: 0.5rem;
+}
+
+.resena-comentario {
+  font-style: italic;
+  color: #4A4A4A;
+  margin-bottom: 0.5rem;
+}
+
+.resena-meta {
+  font-size: 0.85rem;
+  color: #888;
+}
+@media (max-width: 600px) {
+  .resenas {
+    padding: 2rem 1rem;
+  }
+
+  .resena-form {
+    padding: 1rem;
+  }
+
+  .form-group {
+    flex-direction: column;
+  }
+}

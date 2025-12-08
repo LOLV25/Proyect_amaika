@@ -1,0 +1,126 @@
+.blogs {
+  padding: 3rem 2rem;
+  background: linear-gradient(180deg, #fff0f5, #ffe4e1);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.blogs-titulo {
+  font-size: 2rem;
+  color: #8B1E3F;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Formulario */
+.blog-form {
+  background-color: #FCE4EC;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.blog-form input,
+.blog-form textarea {
+  padding: 0.8rem;
+  border: 2px solid #D94D9B;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #5D2A42;
+}
+
+.blog-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn-publicar {
+  background-color: #D94D9B;
+  color: #FFFFFF;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+.btn-publicar:hover {
+  background-color: #8B1E3F;
+}
+
+/* Lista de blogs */
+.lista-blogs {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.blog-item {
+  background-color: #fff;
+  border-left: 4px solid #D94D9B;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.blog-titulo {
+  font-size: 1.4rem;
+  color: #8B1E3F;
+  margin-bottom: 0.5rem;
+}
+
+.blog-meta {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.blog-contenido {
+  font-size: 1rem;
+  color: #4A4A4A;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.blog-slug {
+  font-size: 0.9rem;
+  color: #5D2A42;
+  font-weight: 500;
+}
+
+/* Mensaje vacío */
+.blog-empty {
+  text-align: center;
+  font-size: 1rem;
+  color: #888;
+  background-color: #FCE4EC;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .blogs {
+    padding: 2rem 1rem;
+  }
+
+  .blog-form {
+    padding: 1rem;
+  }
+
+  .blog-item {
+    padding: 1rem;
+  }
+}

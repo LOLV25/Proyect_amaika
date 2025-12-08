@@ -1,0 +1,40 @@
+<section class="resenas">
+  <h2 class="resenas-titulo">💬 Opiniones de nuestros clientes</h2>
+
+  <!-- Formulario para nueva reseña -->
+  <form (ngSubmit)="enviarResena()" class="resena-form">
+    <div class="form-group">
+      <input [(ngModel)]="nuevaResena.nombre" name="nombre" placeholder="Nombre completo" required>
+      <input [(ngModel)]="nuevaResena.email" name="email" type="email" placeholder="Correo electrónico" required>
+    </div>
+    <textarea [(ngModel)]="nuevaResena.comentario" name="comentario" placeholder="¿Qué te pareció el producto?" required></textarea>
+    <div class="form-group">
+      <input [(ngModel)]="nuevaResena.rating" name="rating" type="number" min="1" max="5" placeholder="Calificación (1-5)" required>
+      <button type="submit" class="btn-enviar">Enviar reseña</button>
+    </div>
+  </form>
+
+  <!-- Lista de reseñas -->
+  @if (resenas && resenas.length > 0) {
+    <div class="lista-resenas">
+      @for (r of resenas; track r) {
+        <div class="resena-item">
+          <div class="resena-header">
+            <div class="resena-avatar">{{ r.nombre.charAt(0) }}</div>
+            <div>
+              <h4 class="resena-nombre">{{ r.nombre }}</h4>
+              <span class="resena-rating">
+                @for (star of [].constructor(r.rating); track star) {
+                  ⭐
+                }
+                <span class="resena-puntaje">({{ r.rating }}/5)</span>
+              </span>
+            </div>
+          </div>
+          <p class="resena-comentario">“{{ r.comentario }}”</p>
+          <small class="resena-meta">📧 {{ r.email }} · 🗓 {{ r.fecha }}</small>
+        </div>
+      }
+    </div>
+  }
+</section>

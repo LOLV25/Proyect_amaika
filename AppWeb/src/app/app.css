@@ -1,0 +1,24 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Contenedor principal */
+main {
+  flex: 1;
+  padding: 2rem;
+}
+
+/* Footer fijo al fondo */
+footer {
+  background-color: #d94d9b;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: auto;
+}

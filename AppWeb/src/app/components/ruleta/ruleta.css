@@ -1,0 +1,134 @@
+.ruleta-container {
+  padding: 3rem 2rem;
+  background: linear-gradient(180deg, #fff0f5, #ffe4e1);
+  text-align: center;
+  padding-top: 60px;
+}
+
+.ruleta-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  align-items: flex-start;
+  padding-top: 60px;
+}
+
+.instrucciones-ruleta {
+  max-width: 320px;
+  background-color: rgba(139, 30, 63, 0.05);
+  border-left: 4px solid #D94D9B;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.ruleta {
+  position: relative;
+  width: 320px;
+  height: 320px;
+}
+
+.ruleta-pointer {
+  position: absolute;
+  top: -23px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-bottom: 24px solid #C2185B;
+  z-index: 10;
+}
+
+.ruleta-wheel {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 6px solid #8B1E3F;
+  position: relative;
+  transition: transform 4s cubic-bezier(0.37, 1, 0.68, 1);
+  background-color: #FCE4EC;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(139, 30, 63, 0.3);
+}
+
+.ruleta-sector {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0% 0%;
+  text-align: center;
+}
+
+.ruleta-sector:nth-child(even) span {
+  background-color: #D94D9B;
+  color: #FFFFFF;
+}
+
+.ruleta-sector:nth-child(odd) span {
+  background-color: #FF8A65;
+  color: #FFFFFF;
+}
+
+.ruleta-sector span {
+  display: block;
+  transform: rotate(90deg) translateY(-70%);
+  transform-origin: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.4rem 0.6rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 140px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+.btn-girar {
+  margin-top: 1.5rem;
+  background-color: #D94D9B;
+  color: #FFFFFF;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.btn-girar:hover {
+  background-color: #8B1E3F;
+}
+
+.resultado-ruleta {
+  margin-top: 2rem;
+  background-color: #FCE4EC;
+  border-left: 4px solid #D94D9B;
+  padding: 1.5rem;
+  border-radius: 12px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeInResultado 1s ease forwards;
+}
+
+@keyframes fadeInResultado {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .ruleta-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+}

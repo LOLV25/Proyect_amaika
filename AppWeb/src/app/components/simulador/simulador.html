@@ -1,0 +1,29 @@
+<div class="simulador">
+  <h2>🎮 Simulador de Sabores Jamaika</h2>
+
+  <div class="selector">
+    <label>Sabor 1:</label>
+    <select [(ngModel)]="sabor1">
+      @for (s of sabores; track s) {
+        <option [value]="s">{{s}}</option>
+      }
+    </select>
+
+    <label>Sabor 2:</label>
+    <select [(ngModel)]="sabor2">
+      @for (s of sabores; track s) {
+        <option [value]="s">{{s}}</option>
+      }
+    </select>
+
+    <button (click)="combinar()">¡Combinar!</button>
+  </div>
+
+  @if (mostrarResultado) {
+    <div class="resultado">
+      <h3>{{resultado}}</h3>
+      <p>{{descripcion}}</p>
+      <img [src]="imagenResultado" alt="Combinación de sabores" class="gelatina-img" />
+    </div>
+  }
+</div>

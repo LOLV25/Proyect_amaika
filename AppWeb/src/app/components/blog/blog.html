@@ -1,0 +1,28 @@
+<section class="blogs">
+  <h2 class="blogs-titulo">📚 Publicar Blog</h2>
+
+  <!-- Formulario -->
+  <form (ngSubmit)="enviarBlog()" class="blog-form">
+    <input [(ngModel)]="nuevoBlog.titulo" name="titulo" placeholder="Título del artículo" required>
+    <input [(ngModel)]="nuevoBlog.slug" name="slug" placeholder="Slug (url amigable)" required>
+    <textarea [(ngModel)]="nuevoBlog.contenido" name="contenido" placeholder="Escribe aquí tu contenido..." required></textarea>
+    <button type="submit" class="btn-publicar">Publicar artículo</button>
+  </form>
+
+  <!-- Lista de blogs -->
+  @if (blogs && blogs.length > 0) {
+    <div class="lista-blogs">
+      @for (b of blogs; track b) {
+        <div class="blog-item">
+          <h3 class="blog-titulo">{{ b.titulo }}</h3>
+          <small class="blog-meta">🗓 {{ b.fecha_publicacion || 'Sin fecha' }}</small>
+          <p class="blog-contenido">{{ b.contenido }}</p>
+          <span class="blog-slug">🔗 Slug: {{ b.slug }}</span>
+        </div>
+      }
+    </div>
+  } @else {
+    <div class="blog-empty">Aún no hay artículos publicados. ¡Sé el primero en compartir uno!</div>
+  }
+
+</section>

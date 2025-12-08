@@ -1,0 +1,131 @@
+
+/* */
+.gallery-section {
+  padding: 3rem 2rem;
+  background: linear-gradient(180deg, #fff0f5, #ffe4e1);
+  text-align: center;
+}
+.gallery-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+}
+
+.gallery-title {
+  font-size: 2.4rem;
+  color: #8B1E3F;
+  margin-bottom: 2rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.gallery-card {
+  background-color: rgba(139, 30, 63, 0.05);
+  border: 2px solid #D94D9B;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInCard 1s ease forwards;
+}
+
+.gallery-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.gallery-card img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.card-content h3 {
+  color: #8B1E3F;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-content p {
+  color: #4A4A4A;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn-ia {
+  background-color: rgba(139, 30, 63, 0.7);
+  color: #FFFFFF;
+  border: 2px solid #D94D9B;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-ia:hover {
+  background-color: rgba(139, 30, 63, 0.9);
+  transform: scale(1.05);
+}
+
+.ia-card {
+  margin-top: 1rem;
+  background-color: #FCE4EC;
+  border-left: 4px solid #D94D9B;
+  padding: 1rem;
+  border-radius: 12px;
+  animation: slideInIA 0.6s ease forwards;
+}
+
+.ia-card h4 {
+  color: #8B1E3F;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.ia-card p {
+  color: #4A4A4A;
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+}
+
+.btn-cerrar {
+  background-color: #D94D9B;
+  color: #FFFFFF;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cerrar:hover {
+  background-color: #8B1E3F;
+}
+
+/* Animaciones */
+@keyframes fadeInCard {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInIA {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+
+
+
+
+
+
+
+
+
+

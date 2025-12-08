@@ -1,0 +1,115 @@
+.footer {
+  background-color: #2e7d32;
+  color: #fff;
+  padding: 2rem 1rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-brand h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.footer-brand p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-social p {
+  margin-right: 0.5rem;
+  font-weight: 500;
+}
+
+.footer-social a {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #c8e6c9;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+
+.footer {
+  background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+  background-color: #2e7d32;
+  background-blend-mode: multiply;
+}
+
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .footer-social {
+    justify-content: flex-start;
+  }
+}
+
+
+.footer {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.footer {
+  background: url('https://media.tenor.com/WqK0vdZd9hwAAAAM/flowers-red.gif') center/cover no-repeat;
+  color: #fff;
+  padding: 1rem 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+.footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(194, 24, 91, 0.6); 
+  z-index: 0;
+}
+
+.footer-content, .footer-bottom {
+  position: relative;
+  z-index: 1;
+}
+
+
+footer {
+  background-color: #d94d9b;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: auto;
+}

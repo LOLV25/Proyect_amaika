@@ -1,0 +1,22 @@
+<section class="gallery-section">
+  <h2 class="gallery-title">Galería de Productos 🌿</h2>
+  <div class="gallery-grid">
+    @for (producto of productos; track producto; let i = $index) {
+      <div class="gallery-card">
+        <img [src]="producto.imagen" [alt]="producto.titulo">
+        <div class="card-content">
+          <h3>{{ producto.titulo }}</h3>
+          <p>{{ producto.descripcion }}</p>
+          <button (click)="mostrarSugerencia(i)" class="btn-ia">Sugerencia IA</button>
+          @if (producto.visible) {
+            <div class="ia-card">
+              <h4>💡 Sugerencia IA para {{ producto.nombre }}</h4>
+              <p>{{ producto.sugerencia }}</p>
+              <button (click)="cerrarSugerencia(i)" class="btn-cerrar">Cerrar</button>
+            </div>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</section>

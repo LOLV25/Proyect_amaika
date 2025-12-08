@@ -1,0 +1,63 @@
+<h2>🌺 Comunidad Amaika</h2>
+<p class="intro">Sube tu foto con título y comparte tu experiencia. La comunidad puede comentar y reaccionar.</p>
+
+<div class="uploader">
+  <div class="uploader-left">
+    <label class="label">Título</label>
+    <input type="text" [(ngModel)]="newTitle" placeholder="Ej: Tarde familiar en el Malecón" />
+    <label class="label">Tu nombre</label>
+    <input type="text" [(ngModel)]="newAuthor" placeholder="Ej: María" />
+    <label class="label">Foto</label>
+    <input type="file" accept="image/*" (change)="onPhotoSelected($event)" />
+    <button class="btn-subir" (click)="createPost()">📷 Compartir en la comunidad</button>
+  </div>
+  <div class="uploader-right" *ngIf="newPhotoPreview">
+    <div class="preview-card">
+      <img [src]="newPhotoPreview" alt="Vista previa" />
+      <div class="preview-info">
+        <strong>{{ newTitle || 'Tu título' }}</strong>
+        <span>por {{ newAuthor || 'Tu nombre' }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="card" *ngFor="let post of posts">
+    <img [src]="post.photoUrl" alt="{{post.title}}">
+    <div class="card-body">
+      <div class="card-header">
+        <h3>{{post.title}}</h3>
+        <span class="author">por {{post.author}}</span>
+        <span class="date">{{post.date}}</span>
+      </div>
+
+      <!-- reacciones -->
+      <div class="reactions">
+        <button class="react like" (click)="react(post, 'like')">👍 {{post.reactions.like}}</button>
+        <button class="react love" (click)="react(post, 'love')">💖 {{post.reactions.love}}</button>
+        <button class="react party" (click)="react(post, 'party')">🎉 {{post.reactions.party}}</button>
+      </div>
+
+      <!-- comentarios x -->
+      <div class="comments">
+        <h4>Comentarios</h4>
+        <div class="comment" *ngFor="let c of post.comments">
+          <strong>{{c.author}}</strong>
+          <span class="c-date">{{c.date}}</span>
+          <p>{{c.text}}</p>
+        </div>
+
+        <!-- nuevo comentario -->
+        <div class="comment-form">
+          <input type="text" [(ngModel)]="newCommentAuthor[post.id]" placeholder="Tu nombre" />
+          <input type="text" [(ngModel)]="newCommentText[post.id]" placeholder="Escribe un comentario..." />
+          <button class="btn-comentar" (click)="addComment(post)">Enviar</button>
+        </div>
+      </div>
+
+      <!-- Opcional: eliminar -->
+      <!-- <button class="btn-delete" (click)="deletePost(post.id)">Eliminar</button> -->
+    </div>
+  </div>
+</div>

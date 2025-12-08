@@ -1,0 +1,15 @@
+<div class="buscador-ia">
+  <h2><i class="fas fa-robot"></i> Buscador de Recetas Inteligente</h2>
+
+  <textarea [(ngModel)]="ingredientes" placeholder="Escribe los ingredientes..."></textarea>
+  <button (click)="generarReceta()" [disabled]="cargando">
+    {{ cargando ? 'Generando...' : 'Generar receta' }}
+  </button>
+
+  @if (recetaIA) {
+    <div class="resultado">
+      <h3>🍮 Receta sugerida</h3>
+      <p>{{recetaIA}}</p>
+    </div>
+  }
+</div>

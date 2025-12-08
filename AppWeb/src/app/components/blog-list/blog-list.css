@@ -1,0 +1,88 @@
+.blog {
+  padding: 3rem 2rem;
+  background: linear-gradient(180deg, #fff0f5, #ffe4e1);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.blog h2 {
+  font-size: 2rem;
+  color: #8B1E3F;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Mensajes de estado */
+.blog-empty {
+  text-align: center;
+  font-size: 1rem;
+  color: #888;
+  background-color: #FCE4EC;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Grilla de blogs */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Tarjeta de blog */
+.blog-card {
+  background-color: #fff;
+  border-left: 4px solid #D94D9B;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.blog-title {
+  font-size: 1.3rem;
+  color: #8B1E3F;
+  margin-bottom: 0.5rem;
+}
+
+.blog-excerpt {
+  font-size: 1rem;
+  color: #4A4A4A;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.blog-meta {
+  font-size: 0.9rem;
+  color: #5D2A42;
+  font-weight: 500;
+}
+.blog-meta span {
+  margin-right: 1rem;
+}
+
+
+.btn-eliminar {
+  margin-top: 1rem;
+  background-color: #FF8A65;
+  color: #FFFFFF;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-eliminar:hover {
+  background-color: #D94D9B;
+}

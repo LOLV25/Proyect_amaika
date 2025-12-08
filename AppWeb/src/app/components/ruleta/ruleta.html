@@ -1,0 +1,40 @@
+<section class="ruleta-container">
+  <h2>🎁 Ruleta de Recompensas Amaika</h2>
+  <p>Gira y descubre beneficios naturales, retos saludables y premios exclusivos.</p>
+
+  <div class="ruleta-layout">
+    <!-- Instrucciones -->
+    <div class="instrucciones-ruleta">
+      <h3>📋 Instrucciones para jugar:</h3>
+      <ol>
+        <li>Haz clic en el botón "Girar la ruleta".</li>
+        <li>Espera a que la ruleta se detenga.</li>
+        <li>Descubre tu recompensa y sigue las indicaciones para reclamarla.</li>
+      </ol>
+      <p>¡Diviértete y aprovecha al máximo tus recompensas naturales!</p>
+    </div>
+
+    <!-- Ruleta -->
+    <div class="ruleta">
+      <div class="ruleta-pointer"></div>
+
+      <div class="ruleta-wheel" [style.transform]="'rotate(' + angulo + 'deg)'">
+        @for (premio of premios; track premio; let i = $index) {
+          <div class="ruleta-sector"
+            [style.transform]="'rotate(' + (i * (360 / premios.length)) + 'deg)'">
+            <span>{{ premio }}</span>
+          </div>
+        }
+      </div>
+
+      <button class="btn-girar" (click)="girarRuleta()">Girar la ruleta</button>
+    </div>
+  </div>
+
+  @if (resultado) {
+    <div class="resultado-ruleta">
+      <h3>¡Has ganado: {{ resultado }}!</h3>
+      <p>¡Felicidades! Disfruta de tu recompensa natural.</p>
+    </div>
+  }
+</section>

@@ -1,0 +1,27 @@
+<section class="blog">
+  <h2>📚 Blogs publicados por la comunidad</h2>
+
+  @if (cargando) {
+    <div class="blog-empty">Cargando artículos...</div>
+  }
+
+  @if (!cargando && blogs.length === 0) {
+    <div class="blog-empty">
+      Aún no hay artículos publicados. ¡Sé el primero en compartir uno!
+    </div>
+  }
+
+  @if (blogs.length > 0) {
+    <div class="blog-grid">
+      @for (b of blogs; track b) {
+        <article class="blog-card">
+          <h3 class="blog-title">{{ b.titulo }}</h3>
+          <p class="blog-excerpt">{{ b.contenido | slice:0:140 }}...</p>
+          <div class="blog-meta">
+            🗓 {{ b.fecha_publicacion || 'Sin fecha' }}
+          </div>
+        </article>
+      }
+    </div>
+  }
+</section>
