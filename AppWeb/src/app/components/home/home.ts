@@ -2,11 +2,12 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { QRCodeComponent } from 'angularx-qrcode';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [FormsModule, RouterModule],
+  imports: [FormsModule, RouterModule,QRCodeComponent],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })

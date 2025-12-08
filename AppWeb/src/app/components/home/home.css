@@ -750,3 +750,19 @@
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-6px); }
 }
+
+
+
+/* qr */
+.qr-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.qr-container p {
+  font-family: 'Poppins', sans-serif;
+  color: #00b894;
+  font-weight: bold;
+}
+
+
