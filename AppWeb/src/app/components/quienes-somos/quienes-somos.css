@@ -1,0 +1,41 @@
+.quienes-somos-container {
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  font-family: 'Poppins', sans-serif;
+  color: #4e342e;
+}
+
+.quienes-somos-container h1 {
+  text-align: center;
+  color: #c2185b;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+}
+
+.quienes-somos-container h2 {
+  color: #6a1b9a;
+  font-size: 1.8rem;
+  margin-top: 20px;
+}
+
+.quienes-somos-container p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.valores ul {
+  list-style: none;
+  padding: 0;
+}
+
+.valores li {
+  margin: 10px 0;
+  font-weight: 600;
+  color: #d81b60;
+  font-size: 1.05rem;
+}

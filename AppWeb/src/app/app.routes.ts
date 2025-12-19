@@ -11,6 +11,7 @@ import { BuscadorRecetaInteligente } from './components/buscador-receta-intelige
 import { MapaPuntosVenta } from './components/mapa-puntos-venta/mapa-puntos-venta';
 import { Comunidad } from './components/comunidad/comunidad';
 import { Eventos } from './components/eventos/eventos';
+import { QuienesSomos } from './components/quienes-somos/quienes-somos';
 
 export const routes: Routes = [
     { path: '', component: Home },
@@ -25,6 +26,7 @@ export const routes: Routes = [
     { path: 'mapa', component: MapaPuntosVenta },
     { path: 'comunidad', component: Comunidad },
     { path: 'eventos', component: Eventos },
+    { path: 'quienes-somos', component: QuienesSomos },
 
 
     //       

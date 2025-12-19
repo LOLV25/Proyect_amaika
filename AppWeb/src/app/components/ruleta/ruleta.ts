@@ -29,13 +29,15 @@ export class Ruleta {
 
   girarRuleta() {
     if (this.girando) return; // Evita múltiples clics
-    
+
     this.girando = true;
     this.resultado = null;
 
     const vueltas = 360 * 6; // 6 vueltas completas
     const premioIndex = Math.floor(Math.random() * this.premios.length);
-    const anguloFinal = vueltas + (premioIndex * (360 / this.premios.length));
+    const sector = 360 / this.premios.length;
+    const anguloFinal = vueltas + (360 - premioIndex * sector - sector / 2);
+
 
     this.angulo = anguloFinal;
 

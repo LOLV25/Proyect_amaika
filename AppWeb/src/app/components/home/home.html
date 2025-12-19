@@ -13,19 +13,31 @@
 
 
   <div class="hero-photo">
-    <img
-      src="https://scontent.fgye4-1.fna.fbcdn.net/v/t39.30808-6/591396842_25177112865315620_6454063601089584033_n.jpg?stp=dst-jpg_p180x540_tt6&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=SAj_TyjTfAIQ7kNvwEb7RS2&_nc_oc=Adl5MsoBZ0aeCKy5HMw1BsIGDwFWu7J-yvmR8mLYirqeikSrqau6tr5t2Aw6rxDP9hg&_nc_zt=23&_nc_ht=scontent.fgye4-1.fna&_nc_gid=wrKaCiJPDZH0zpDiXKVfdQ&oh=00_AfjSoWXZsNahutHFFS-Ccr7x7Xi9NZox_76MeWuUR_Qamw&oe=693293B1"
-      alt="Productos naturales">
+    <img src="https://pbs.twimg.com/media/G8Qog-7XYAAv0b_?format=jpg&name=large" alt="Productos naturales">
     <!--<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvsTQ48vE-l8KP6A9lgLyEIrXDSzNcSHp4Og&s"
       alt="Producto natural">-->
   </div>
 </section>
 
- <!--QR-->
-  <div class="qr-container">
-    <qrcode [qrdata]="'http://192.168.3.19:4200'" [width]="200"></qrcode>
-    <p>Escanea este código para entrar desde tu celular</p>
-  </div>
+
+<!-- Cuenta regresiva -->
+<div class="jamaica-countdown">
+  <h2>⏳ Presentación Amaika</h2>
+  <p class="countdown-text">
+    Faltan <span class="count">{{ days }}</span>d
+    <span class="count">{{ hours }}</span>h
+    <span class="count">{{ minutes }}</span>m
+    <span class="count">{{ seconds }}</span>s
+  </p>
+  <p class="subtext">Sábado 20 de diciembre · 11:30 AM</p>
+</div>
+
+
+<!--QR-->
+<div class="qr-container">
+  <qrcode [qrdata]="'http://192.168.3.19:4200'" [width]="200"></qrcode>
+  <p>Escanea este código para entrar desde tu celular</p>
+</div>
 
 <section class="jamaica-gif">
   <h2>Gelatina de Flor de Jamaica 🌸</h2>
@@ -70,7 +82,7 @@
   </div>
 
 
- 
+
 
 
 

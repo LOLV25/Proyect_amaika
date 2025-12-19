@@ -766,3 +766,41 @@
 }
 
 
+/*cuenta regresiva*/
+
+.jamaica-countdown {
+  text-align: center;
+  margin: 30px auto;
+  padding: 25px;
+  background: linear-gradient(135deg, #f8bbd0, #fce4ec);
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  font-family: 'Poppins', sans-serif;
+  color: #4e342e;
+  max-width: 600px;
+}
+
+.jamaica-countdown h2 {
+  font-size: 2rem;
+  color: #c2185b;
+  margin-bottom: 10px;
+}
+
+.countdown-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #6a1b9a;
+  margin-bottom: 8px;
+}
+
+.count {
+  color: #d81b60;
+  padding: 0 5px;
+  transition: all 0.3s ease;
+}
+
+.subtext {
+  font-size: 1rem;
+  color: #8e44ad;
+  font-style: italic;
+}

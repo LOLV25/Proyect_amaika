@@ -18,16 +18,23 @@
     <div class="ruleta">
       <div class="ruleta-pointer"></div>
 
-      <div class="ruleta-wheel" [style.transform]="'rotate(' + angulo + 'deg)'">
+      <div
+        class="ruleta-wheel"
+        [style.transform]="'rotate(' + angulo + 'deg)'"
+      >
         @for (premio of premios; track premio; let i = $index) {
-          <div class="ruleta-sector"
-            [style.transform]="'rotate(' + (i * (360 / premios.length)) + 'deg)'">
+          <div
+            class="ruleta-sector"
+            [style.transform]="'rotate(' + (i * (360 / premios.length)) + 'deg)'"
+          >
             <span>{{ premio }}</span>
           </div>
         }
       </div>
 
-      <button class="btn-girar" (click)="girarRuleta()">Girar la ruleta</button>
+      <button class="btn-girar" (click)="girarRuleta()">
+        Girar la ruleta
+      </button>
     </div>
   </div>
 
